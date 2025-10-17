@@ -2,7 +2,7 @@
 source <(curl -fsSL https://raw.githubusercontent.com/pcbulai/ProxmoxVE/main/misc/build.func)
 
 
-APP="Mullvad-Exit"
+APP="Mullvad"
 var_tags="${var_tags:-vpn;mullvad;tailscale}"
 var_cpu="${var_cpu:-1}"
 var_ram="${var_ram:-512}"

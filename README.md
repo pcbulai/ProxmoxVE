@@ -1,7 +1,7 @@
 <div align="center">
   <p align="center">
     <a href="#">
-      <img src="https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/images/logo-81x112.png" height="100px" />
+      <img src="https://raw.githubusercontent.com/pcbulai/ProxmoxVE/main/misc/images/logo-81x112.png" height="100px" />
     </a>
   </p>
 </div>
@@ -47,6 +47,7 @@
 - **Community-driven**: Actively maintained and improved by the Proxmox community.
 
 ---
+
 ## ✅ Requirements
 
 Ensure your system meets the following prerequisites:
@@ -74,6 +75,7 @@ To install the Proxmox Helper Scripts, follow these steps:
 We appreciate any contributions to the project—whether it's bug reports, feature requests, documentation improvements, or spreading the word. Your involvement helps keep the project alive and sustainable.
 
 ## 💖 Donate to Support the Project
+
 - **Ko-Fi for Community Edition**: [Donate to support this project](https://ko-fi.com/community_scripts) – Donations go towards maintaining the project, testing infrastructure, and charity (cancer research, hospice care). 30% of the funds will be donated to charity.
 
 ---
@@ -110,5 +112,3 @@ This project is licensed under the [MIT License](LICENSE).
 <p align="center">
   <i style="font-size: smaller;"><b>Proxmox</b>® is a registered trademark of <a href="https://www.proxmox.com/en/about/company">Proxmox Server Solutions GmbH</a>.</i>
 </p>
-
-
