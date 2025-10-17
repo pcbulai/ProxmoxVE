@@ -21,7 +21,7 @@ msg_info "Installing required packages (wireguard-tools, iptables, curl, resolvc
 debug_log "Starting package installation"
 for attempt in 1 2 3; do
     debug_log "Package installation attempt $attempt"
-    if timeout 300 apt install -y wireguard-tools iptables curl resolvconf 2>&1 | tee /tmp/apt-install.log; then
+    if timeout 300 bash -c "DEBIAN_FRONTEND=noninteractive apt install -y wireguard-tools iptables curl resolvconf iptables-persistent" 2>&1 | tee /tmp/apt-install.log; then
         debug_log "Package installation successful"
         break
     else
@@ -95,23 +95,6 @@ for attempt in 1 2 3; do
     sleep 5
 done
 msg_ok "Installed Tailscale"
-
-
-msg_info "Installing iptables-persistent"
-for attempt in 1 2 3; do
-    if timeout 300 bash -c "DEBIAN_FRONTEND=noninteractive apt install -y iptables-persistent"; then
-        break
-    else
-        msg_error "iptables-persistent installation attempt $attempt failed, retrying..."
-        sleep 5
-        if [ $attempt -eq 3 ]; then
-            msg_error "Failed to install iptables-persistent after 3 attempts"
-            exit 1
-        fi
-    fi
-done
-msg_ok "Installed iptables-persistent"
-
 
 msg_info "Creating Mullvad + Tailscale setup script"
 debug_log "Creating setup script at /root/mullvad-tailscale-setup.sh"
